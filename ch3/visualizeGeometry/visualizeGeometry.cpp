@@ -64,11 +64,11 @@ istream& operator >> (istream& in, const QuaternionDraw quat)
 
 int main ( int argc, char** argv )
 {
-    pangolin::CreateWindowAndBind ( "visualize geometry", 1000, 600 );
+    pangolin::CreateWindowAndBind ( "visualize geometry", 1000, 600 ); //creates a window with the name and resolution specified
     glEnable ( GL_DEPTH_TEST );
     pangolin::OpenGlRenderState s_cam (
         pangolin::ProjectionMatrix ( 1000, 600, 420, 420, 500, 300, 0.1, 1000 ),
-        pangolin::ModelViewLookAt ( 3,3,3,0,0,0,pangolin::AxisY )
+        pangolin::ModelViewLookAt ( 3,3,3,0,0,0,pangolin::AxisY ) //camera at 3,3,3 looking at 0,0,0
     );
     
     const int UI_WIDTH = 500;
